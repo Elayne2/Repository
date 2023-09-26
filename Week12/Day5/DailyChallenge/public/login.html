@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="formstyle.css">
+    <title>Login page</title>
+</head>
+<body>
+    <div class="container">
+        <form id="LoginForm" action="http://localhost:7500/loginForm" method="GET" target="_blank">
+            <h1>Login :</h1>
+            <div class="ro"><label for="username">Username : </label><input type="text" id="username"></div>
+            <div class="ro"><label for="password">Password : </label><input type="password" id="password"></div>
+            <hr>
+            <button id="login" type="submit" disabled>Login</button>
+        </form>
+        <div id="showLogin" class="screen"></div>
+    </div>
+
+    <script>
+        function handeleLoginForm(){
+    //const loginForm = document.getElementById('LoginForm');
+    const login = document.getElementById('login')
+
+    const ids = ['username', 'password']
+    const inputs = ids.map((id) => document.getElementById(id))
+
+    function checkfilds(){
+        inputs.forEach((inp) => {
+            inp?.addEventListener('input', isChanged)
+        })
+        function isChanged(e){
+            e.preventDefault();
+            if(isEnyInputEmpty()){
+                login.disabled = true;
+            }else{
+                login.disabled = false;
+            }  
+        }
+        function isEnyInputEmpty(){
+                return inputs.some((inp) => inp.value === "")  //true or false
+        }
+    }
+    checkfilds();
+
+    function sendData(){
+        const loginData = [];
+        login.addEventListener('click', (e) => {
+            e.preventDefault();
+            inputs.forEach((inp) => {
+                loginData.push(inp.value)
+            })
+            const obj ={...loginData}
+
+            const bodyData = {
+                user : obj[0],
+                pass : obj[1]
+            }
+            console.log(bodyData)
+
+            function fetchData(){
+                fetch('/login', {
+                    method: 'POST',
+                    headers: { 'Content-Type':'application/json'},
+                    body: JSON.stringify(bodyData)
+                })
+                .then(res =>  res.json())
+                .then((data) => {
+                    console.log(data)
+                    document.getElementById('showLogin').textContent = `${data.message}` ;
+                })
+                .catch(err => console.log(err))
+            }
+            fetchData();
+        })
+    }
+    sendData();   
+}
+handeleLoginForm();
+    </script>
+</body>
+</html>
