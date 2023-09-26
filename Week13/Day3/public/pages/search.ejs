@@ -1,0 +1,38 @@
+<%- include('../partials/head.ejs') %>
+<%- include('../partials/header.ejs') %>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <form action="/search/title" method="POST">
+                <div class="form-group">
+                    <label for="title">Search by Title:</label>
+                    <input type="text" name="title" id="title" class="form-control" placeholder="Enter title" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Search</button>
+            </form>
+        </div>
+        <div class="col-md-6">
+            <form action="/search/category" method="POST">
+                <div class="form-group">
+                    <label for="category">Search by Category:</label>
+                    <select name="category" id="category" class="form-control" required>
+                       
+                        <option value="category1">COUNTRIES  </option>
+                        <option value="category2">PEOPLE</option>
+                        <option value="category3">50 US STATES</option>
+                        <option value="category4">SPORTS</option>
+                        <option value="category5">INVENTIONS</option>
+                        <option value="category6">FESTIVALS</option>
+                        <option value="category7">ANIMALS</option>
+                       
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Search</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<%- include('../partials/posts.ejs', { feed: feed }) %>
+<%- include('../partials/footer.ejs') %>

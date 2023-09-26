@@ -1,0 +1,10 @@
+<div class="container">
+    <% feed.forEach(post => { %>
+        <div class="post">
+            <a href="<%= post.link %>"><%= post.title %></a>
+            <p>Published on <%= post.pubDate %> by <%= post.creator %></p>
+            <p>Categories: <%= post.categories.join(', ') %></p>
+            <p><%= post.content %></p>
+        </div>
+    <% }) %>
+  </div>

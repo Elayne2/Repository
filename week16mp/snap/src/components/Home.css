@@ -1,0 +1,52 @@
+h1{
+    position: absolute;
+    left: 40%;
+}
+.search{
+    position: absolute;
+    left: 45%;
+    top: 12%;
+
+}
+.categories{
+    position: absolute;
+    left: 33%;
+    top: 20%;
+    color:white;
+   
+      
+}
+.category{
+   
+    text-decoration: none;
+   background-color: burlywood;
+   border-radius: 20px;
+   font-weight: 500;
+   margin-left: 30px;
+}
+input{
+    position: absolute;
+    left: 36%;
+    top: 13%;
+}
+button{
+    position: absolute;
+    left: 50%;
+    top: 13%;
+}
+.CategoriImage{
+    position: absolute;
+    top: 40%;
+}
+.name{
+    position: absolute;
+   margin-top: 15%;
+
+}
+.gallery-image{
+    width: 300px;
+    height: 300px;
+    position: relative;
+    margin-top: 20%;
+    margin-left: 8%;
+}
