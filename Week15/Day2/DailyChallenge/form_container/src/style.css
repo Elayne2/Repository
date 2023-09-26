@@ -1,0 +1,79 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.form{
+    background-color:gray;
+    padding:10px;
+
+}
+
+.frm h1{
+    background-color: rgb(36, 35, 35);
+    padding: 10px;
+    color: white;
+}
+
+.form input{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    border-top: 2px solid black;
+    border-left: 2px solid black;
+    border-bottom: 2px solid gray;
+    border-right: 2px solid gray;
+    font-size: 18px;
+    border-radius: 5px;
+    margin-block: 3px;
+}
+
+.form p{
+    font-weight: bold;
+}
+.form > input{
+    width: 60%;
+    margin-bottom: 10px;
+}
+
+
+
+.InputWithLabel{
+    display: flex;
+}
+
+.form button{
+    padding: 10px;
+    padding-inline: 1.2rem;
+    border-radius: 4px;
+    font-size: 18px;
+    border: 1px solid grey;
+    background-color: black;
+    color: white;
+}
+
+.form :nth-child(12), .form :nth-child(13), .form :nth-child(14) {
+    margin-left: 20px;
+}
+
+hr{
+    margin-block: 0.5rem;
+}
+.info{
+background-color: rgb(138, 97, 97);
+    padding: 10px;
+    font-size: 18px;
+    color: white;
+}
+.info h1{
+    text-align: center;
+    color: black;
+    margin-bottom: 1rem;
+    background-color: transparent;
+}
+
+
+.top p{
+    margin-bottom: 1rem;
+}

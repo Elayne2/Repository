@@ -1,0 +1,98 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.navbar{
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+}
+
+.navbar p{
+    margin-inline: 1rem;
+}
+
+.header h1{
+    padding-inline: 1rem;
+}
+
+.header h1{
+    width: 100vw;
+    text-align: left;
+    font-size: 30px;
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding-top: 1rem;
+    font-weight: bold;
+    
+}
+.header h1:hover{
+    color: white;
+}
+.section {
+    height: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-content: flex-start;
+    overflow: auto;
+}
+
+
+
+.jumbotron{
+    text-align: center;
+    display: flex;
+    background:gray;
+    background-size: cover;
+    height: 50px;
+    width: 100%;
+    border-top: 7px solid rgb(102, 53, 53);
+}
+
+.jumbotron p{
+    text-align: center;
+    margin: 0 0 20px;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+
+.container{
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.card{
+    background: #fff;
+    border: 5px solid #fff;
+    border-radius: 2px;
+    margin: 40px 20px;
+    position: relative;
+    height: 300px;
+    width: 250px;
+border: 1px solid gray;
+    text-align: left;
+}
+
+.card-img{
+    height: 80%;
+    width:18rem;
+}
+
+.card-img img{
+    width: 80%;
+    height: 100%;
+    overflow: clip;
+    padding-inline: 1rem;
+   
+}

@@ -1,0 +1,26 @@
+{
+    "SocialMedias": [
+      "Facebook",
+      "Twitter",
+      "Instagram"
+    ],
+    "Skills": {
+      "Programming": ["JavaScript", "Python", "Java"],
+      "Design": ["Photoshop", "Illustrator"],
+      "Languages": ["English", "French"]
+    },
+    "Experiences": [
+      {
+        "id": 1,
+        "position": "Frontend Developer",
+        "company": "TechCo",
+        "duration": "2020 - Present"
+      },
+      {
+        "id": 2,
+        "position": "UI/UX Designer",
+        "company": "DesignStudio",
+        "duration": "2018 - 2020"
+      }
+    ]
+  }
